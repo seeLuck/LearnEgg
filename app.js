@@ -17,4 +17,12 @@ module.exports = app => {
         //console.log('response', used);
         //console.log(ctx.request.body);
     });
+
+    app.validator.addRule('json', (rule, value) => {
+        try {
+            JSON.parse(value);
+        } catch (err) {
+            return 'must be json string';
+        }
+    });
 };

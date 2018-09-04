@@ -24,7 +24,5 @@ module.exports = appInfo => {
         dir: './logs/2.project',
     };
 
-
-
     return config;
 };

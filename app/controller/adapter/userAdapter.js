@@ -1,7 +1,9 @@
 module.exports = {
     addUser: {
         name: {
-            type: 'string'
+            type: 'number'
         }
+        //自定义规则
+        //name: 'json'
     }
 };
