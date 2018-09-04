@@ -7,12 +7,7 @@ module.exports = appInfo => {
         xframe: {
             enable: false,
         },
-        csrf: {
-            // 判断是否需要 ignore 的方法，请求上下文 context 作为第一个参数
-            ignore: function () {
-                return true
-            },
-        },
+        csrf: false
     };
 
     // use for cookie sign key, should change to your own and keep security

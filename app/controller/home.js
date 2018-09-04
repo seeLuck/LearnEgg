@@ -12,6 +12,8 @@ class HomeController extends Controller {
 
         //输出，和post区分
         this.ctx.body = 'hi, egg';
+
+        //this.ctx.redirect('/users')
     }
 }
 
