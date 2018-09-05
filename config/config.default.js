@@ -24,5 +24,12 @@ module.exports = appInfo => {
         dir: './logs/2.project',
     };
 
+    config.customLogger = {
+        scheduleLogger: {
+            consoleLevel: 'NONE',
+            // file: path.join(appInfo.root, 'logs', appInfo.name, 'egg-schedule.log'),
+        },
+    };
+
     return config;
 };
