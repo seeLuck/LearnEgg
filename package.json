@@ -9,6 +9,7 @@
     "egg-security": "^2.4.0",
     "egg-validate": "^2.0.0",
     "koa-is-json": "^1.0.0",
+    "ylru": "^1.2.1",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
@@ -29,8 +30,7 @@
     "stop": "egg-scripts stop --title=egg-server-2.project",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "test": "npm run lint -- --fix && npm run test-local",
-    "test-local": "egg-bin test",
+    "test": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
