@@ -31,4 +31,18 @@ module.exports = app => {
         // 后续数据的更新由定时任务自动触发
         //await app.runSchedule('update_cache');
     });
+
+    //agent消息
+    app.messenger.on('xxx_action', data => {
+        console.log('get xxx_action')
+    });
+
+    app.messenger.once('egg-ready', () => {
+        app.messenger.sendToAgent('agent-event', { foo: 'bar' });
+        app.messenger.sendToApp('app-event', { foo: 'bar' }); //这个是给workers群发消息，包括自己
+    });
+
+    app.messenger.on('app-event', () => {
+        console.log('get app-event')
+    });
 };

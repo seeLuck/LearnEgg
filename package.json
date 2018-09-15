@@ -26,9 +26,9 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-2.project",
+    "start": "egg-scripts start --daemon --title=egg-server-2.project --workers=2",
     "stop": "egg-scripts stop --title=egg-server-2.project",
-    "dev": "egg-bin dev",
+    "dev": "egg-bin dev --cluster=2",
     "debug": "egg-bin debug",
     "test": "egg-bin test",
     "cov": "egg-bin cov",
