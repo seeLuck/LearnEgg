@@ -5,5 +5,6 @@ module.exports = app => {
     router.get('/usersGzip', app.middleware.gzip({ threshold: 1024 }), controller.user.testGzip);
     router.get('/getUser/:userId/:name', app.middleware.uppercase(), controller.user.getUser);
     router.post('/addUser', controller.user.addUser);
+    router.get('/testPlugin', controller.user.testPlugin);
     //router.redirect('/', '/users', 302);
 };

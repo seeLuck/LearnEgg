@@ -45,6 +45,13 @@ describe('test/controller/user.test.js', () => {
             // 也可以这样验证
             assert(result.status === 200);
         });
+
+        it('plugin OK', () => {
+            // 对 app 发起 `GET /` 请求
+            return app.httpRequest()
+                    .get('/testPlugin')
+                    .expect(200) // 期望返回 status 200
+        });
     });
 
     describe('POST /', ()=>{

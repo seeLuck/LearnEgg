@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "egg": {
+    "framework": "ua-framework"
+  },
   "dependencies": {
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "egg-security": "^2.4.0",
     "egg-validate": "^2.0.0",
+    "ua-framework": "../ua-framework",
     "koa-is-json": "^1.0.0",
     "ylru": "^1.2.1",
     "zlib": "^1.0.5"

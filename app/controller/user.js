@@ -33,6 +33,13 @@ class UserController extends BaseController {
         this.success(data1);
     }
 
+    async testPlugin(){
+        this.ctx.foo()
+        this.ctx.nfoo()
+        this.ctx.body = 123
+        //this.ctx.ua.foo();
+        //console.log()
+    }
     //上传文件
     //https://eggjs.org/zh-cn/basics/controller.html#获取上传的文件
 }
